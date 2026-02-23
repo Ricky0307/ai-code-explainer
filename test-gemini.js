@@ -14,15 +14,15 @@ async function listModels() {
 
         console.log("Testing connection with API Key: " + apiKey.substring(0, 10) + "...");
 
-        const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash" });
+        const model = genAI.getGenerativeModel({ model: "gemini-flash-latest" });
 
-        console.log("Attempting to generate content with gemini-1.5-flash...");
+        console.log("Attempting to generate content with gemini-flash-latest...");
         const result = await model.generateContent("Hello, are you there?");
-        console.log("Success! Model gemini-1.5-flash works.");
+        console.log("Success! Model gemini-flash-latest works.");
         console.log("Response: ", result.response.text());
 
     } catch (error) {
-        console.error("Error testing gemini-1.5-flash:");
+        console.error("Error testing gemini-flash-latest:");
         console.error(error.message);
 
         // Try gemini-pro fallback

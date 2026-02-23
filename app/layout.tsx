@@ -9,9 +9,8 @@ const _geist = Geist({ subsets: ['latin'] })
 const _geistMono = Geist_Mono({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
-  title: 'AI Code Explainer',
-  description: 'Understand any code with AI-powered explanations powered by Gemini',
-  generator: 'v0.app',
+  title: 'CodeLens AI | Premium Code Explainer',
+  description: 'Understand complex code snippets instantly with Gemini-powered AI analysis. Logic, complexity, and improvements in one place.',
 }
 
 export default function RootLayout({
@@ -20,10 +19,10 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="en">
-      <body className="font-sans antialiased">
+    <html lang="en" className="dark">
+      <body className="font-sans antialiased bg-[#030303]">
         {children}
-        <Toaster />
+        <Toaster position="top-center" richColors />
       </body>
     </html>
   )

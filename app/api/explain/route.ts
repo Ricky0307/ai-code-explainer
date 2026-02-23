@@ -27,10 +27,13 @@ export async function POST(request: NextRequest) {
     const genAI = new GoogleGenerativeAI(apiKey)
 
     // List of models to try in order of preference
+    // Using newer models like 2.0-flash and latest aliases for better compatibility
     const modelsToTry = [
+      'gemini-flash-latest',
+      'gemini-2.0-flash',
       'gemini-1.5-flash',
+      'gemini-pro-latest',
       'gemini-1.5-pro',
-      'gemini-1.0-pro',
       'gemini-pro'
     ]
 
